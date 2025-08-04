@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+### Idea
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Purpose
 
-Currently, two official plugins are available:
+- Social app for students to find study partners with others with similar topics of study.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Value
 
-## Expanding the ESLint configuration
+- Students can build a network
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Can find a study partner of their similar level or similar pursuit
+  - Even within a university degree - not all people will study for the same pursuit. Bachelor of Science, for example, can go so many ways - medicine, pharm, research, etc. Comp Sci - Devs, Data
+- Sometimes studying with your friends can be not as productive.
+- Accountability
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### MVP
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- As a user, I can register and create a profile
+- As a user, I can add subjects to my profile
+- As a user, I can optionally add a grade/year
+- As a user, I can optionally add my city (for those who want to meet up)
+- As a user, I can see other’s profile information
+- As a user, I can chat with another user
+- As a user, I can rate another user’s productivity during a study session
+- The rating system will be tag based as opposed to star based:
+  - “Focused”
+  - “Committed”
+  - “Punctual”
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### Other Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- As a user, I can create a group with tags like “MCAT”, “leetcode”, “mock interview”
+- As a user, when I add a subject to my profile, I can opt into related groups.
+- As an admin of a group, I can accept invitations, or remove users.
+- As an admin, I can provide roles
+- As a user with proper role access, I can create events or make announcements in the group.
+- As a user with proper role access, you can upload files (for notes or meeting documentation).
+- As a user, events that you attend (online or in person) will mark a day of completion (like a github commit map)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Entity Relationship Diagram
