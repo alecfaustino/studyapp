@@ -38,3 +38,6 @@
 - As a user, events that you attend (online or in person) will mark a day of completion (like a github commit map)
 
 ### Entity Relationship Diagram
+
+- Questions to resolve:
+  - does the type of the city and education level for the users table have to change if we're going to be putting a matching algorithm in the future?
