@@ -39,5 +39,6 @@
 
 ### Entity Relationship Diagram
 
+- https://excalidraw.com/#json=sYvdV9ktJ-DlUDPUKBfUw,GVaLvLmXxAARzMpr7-QsRQ
 - Questions to resolve:
   - does the type of the city and education level for the users table have to change if we're going to be putting a matching algorithm in the future?
