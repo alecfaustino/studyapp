@@ -42,3 +42,8 @@
 - https://excalidraw.com/#json=sYvdV9ktJ-DlUDPUKBfUw,GVaLvLmXxAARzMpr7-QsRQ
 - Questions to resolve:
   - does the type of the city and education level for the users table have to change if we're going to be putting a matching algorithm in the future?
+
+### Front-End
+
+- Site Map Home to Messages v1
+  - https://excalidraw.com/#json=3fWvha-9pShL0A2thABLm,mOtEb04OZPNnB11B57Rejg
