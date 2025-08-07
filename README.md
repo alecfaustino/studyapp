@@ -47,3 +47,5 @@
 
 - Site Map Home to Messages v1
   - https://excalidraw.com/#json=3fWvha-9pShL0A2thABLm,mOtEb04OZPNnB11B57Rejg
+- Site Map Profile and Browse v1
+  - https://excalidraw.com/#json=q_PTJgMO932AVPvmAK7d6,6gWipl7he6TY7MeNE8QjWA
