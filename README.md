@@ -39,13 +39,14 @@
 
 ### Entity Relationship Diagram
 
-- https://excalidraw.com/#json=sYvdV9ktJ-DlUDPUKBfUw,GVaLvLmXxAARzMpr7-QsRQ
+![erd](./docs/erd.png)
+
 - Questions to resolve:
   - does the type of the city and education level for the users table have to change if we're going to be putting a matching algorithm in the future?
 
 ### Front-End
 
 - Site Map Home to Messages v1
-  - https://excalidraw.com/#json=3fWvha-9pShL0A2thABLm,mOtEb04OZPNnB11B57Rejg
+  ![sitemapv1toMessage](./docs/sitemaptomsgv1.png)
 - Site Map Profile and Browse v1
-  - https://excalidraw.com/#json=q_PTJgMO932AVPvmAK7d6,6gWipl7he6TY7MeNE8QjWA
+  ![sitemapv1](./docs/sitemapv1.png)
