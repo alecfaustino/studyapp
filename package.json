@@ -9,11 +9,13 @@
     "full": "concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db:reset": "dotenv -e .env -- psql -f server/db/reset.sql"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
+    "dotenv-cli": "^10.0.0",
     "express": "^5.1.0",
     "morgan": "^1.10.1",
     "pg": "^8.16.3",
