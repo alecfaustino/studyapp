@@ -14,4 +14,4 @@ DROP TYPE IF EXISTS role_enum CASCADE;
 \i server/db/schema.sql
 
 -- run seeds
--- no seeds yet
+\i server/db/seeds.sql
