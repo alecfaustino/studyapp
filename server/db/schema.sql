@@ -6,7 +6,7 @@ CREATE TABLE users (
   profile_image_url TEXT,
   city VARCHAR(50),
   education_level VARCHAR(50),
-  created_at TIMESTAMP DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- table: groups
@@ -15,7 +15,7 @@ CREATE TABLE groups (
   name VARCHAR(50) NOT NULL,
   description TEXT,
   created_by INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  created_at TIMESTAMP DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- table: review tags
@@ -38,7 +38,7 @@ CREATE TYPE role_enum AS ENUM ('member', 'admin');
 CREATE TABLE group_users (
   user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   group_id INT NOT NULL REFERENCES groups(id) ON DELETE CASCADE, 
-  joined_at TIMESTAMP DEFAULT NOW(),
+  joined_at TIMESTAMPTZ DEFAULT NOW(),
   role role_enum NOT NULL DEFAULT 'member',
   PRIMARY KEY (user_id, group_id)
 );
@@ -49,5 +49,5 @@ CREATE TABLE user_ratings (
   rated_user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   tag_id INT NOT NULL REFERENCES review_tags(id) ON DELETE CASCADE,
   rating_user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  created_at TIMESTAMP DEFAULT NOW()
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
