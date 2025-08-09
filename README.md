@@ -50,3 +50,19 @@
   ![sitemapv1toMessage](./docs/sitemaptomsgv1.png)
 - Site Map Profile and Browse v1
   ![sitemapv1](./docs/sitemapv1.png)
+
+### Database set up
+
+- Make sure postgres is running
+- Create DB in local machine
+
+```bash
+createdb your_db_name
+```
+
+- copy .env.example into a .env file and input appropriate values
+- run the db reset
+
+```bash
+npm run db:reset
+```
