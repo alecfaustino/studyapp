@@ -8,10 +8,14 @@ CREATE TABLE users (
   last_name VARCHAR(50) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   password_hash VARCHAR(255) NOT NULL,
 =======
   password_hash VARCHAR(255) NOT NULL
 >>>>>>> ed5c6bb (add email and password_hash to users table)
+=======
+  password_hash VARCHAR(255) NOT NULL,
+>>>>>>> 2942382 (use pgcrypto extension to generate UUID instead of serial key)
   profile_image_url TEXT,
   city VARCHAR(50),
   education_level VARCHAR(50),
