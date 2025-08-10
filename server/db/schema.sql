@@ -7,7 +7,11 @@ CREATE TABLE users (
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
+<<<<<<< HEAD
   password_hash VARCHAR(255) NOT NULL,
+=======
+  password_hash VARCHAR(255) NOT NULL
+>>>>>>> ed5c6bb (add email and password_hash to users table)
   profile_image_url TEXT,
   city VARCHAR(50),
   education_level VARCHAR(50),
