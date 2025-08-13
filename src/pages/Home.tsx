@@ -16,6 +16,7 @@ const Home = () => {
         <article className="home-article">
           <p>Alec Faustino</p>
           {/* This means, we need a user-event table maybe? */}
+          {/* Names should be clickable links when we change this to dynamic using Link from React Routes*/}
           <p>Alec Faustino had a study event with John Doe</p>
         </article>
       </main>
