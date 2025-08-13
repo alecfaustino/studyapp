@@ -80,3 +80,11 @@ CREATE TABLE user_events (
   attended BOOLEAN DEFAULT FALSE,
   PRIMARY KEY (user_id, event_id)
 );
+
+-- table: user_networks
+CREATE TABLE user_networks (
+    follower_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    following_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    PRIMARY KEY (follower_id, following_id)
+);
