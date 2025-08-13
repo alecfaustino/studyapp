@@ -1,6 +1,11 @@
+import BottomNav from "../components/BottomNav"
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <div>Home</div>
+      <BottomNav />
+    </>
   )
 }
 
