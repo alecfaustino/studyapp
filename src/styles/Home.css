@@ -1,9 +1,19 @@
 .home-header {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   padding: 2em;
   gap: 1rem;
   align-items: center;
+}
+
+.home-header-brand {
+  display: flex;
+  width: 100%;
+}
+
+.home-header-welcome {
+  font-size: 3rem;
 }
 
 .home-logo {

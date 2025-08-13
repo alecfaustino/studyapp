@@ -6,18 +6,24 @@ const Home = () => {
   return (
     <>
       <header className="home-header">
-        <img alt="temporary logo" src={templogo} className="home-logo" />
-        <h2>StudyAppNameTBD</h2>
+        <div className="home-header-brand">
+          <img alt="temporary logo" src={templogo} className="home-logo" />
+          <h2>StudyAppNameTBD</h2>
+        </div>
+
+        <div className="home-header-welcome">
+        <p>Good Afternoon Alice Smith!</p>
+        </div>
       </header>
 
       <main>
         <h3>Recent Study Events From Your Network</h3>
         {/* TO DO Make the article a component */}
         <article className="home-article">
-          <p>Alec Faustino</p>
+          <p>Bob Johnson</p>
           {/* This means, we need a user-event table maybe? */}
           {/* Names should be clickable links when we change this to dynamic using Link from React Routes*/}
-          <p>Alec Faustino had a study event with John Doe</p>
+          <p>Bob Johnson had a study event with Carol Williams</p>
         </article>
       </main>
       <BottomNav />
