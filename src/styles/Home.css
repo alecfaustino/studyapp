@@ -26,4 +26,9 @@
 /* This will be a separate style when the article component is made */
 .home-article {
   background-color: grey;
+  margin: 2rem;
+}
+
+h3 {
+  padding: 2em;
 }

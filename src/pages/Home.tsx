@@ -25,6 +25,16 @@ const Home = () => {
           {/* Names should be clickable links when we change this to dynamic using Link from React Routes*/}
           <p>Bob Johnson had a study event with Carol Williams</p>
         </article>
+        <article className="home-article">
+          <p>Alice Smith</p>
+          {/* This means, we need a user-event table maybe? */}
+          <p>Alice Smith joined a study group: LeetCoders</p>
+        </article>
+        <article className="home-article">
+          <p>Carol Williams</p>
+          {/* This means, we need a user-event table maybe? */}
+          <p>Carol Smith shared 4 study sessions this week</p>
+        </article>
       </main>
       <BottomNav />
     </>
