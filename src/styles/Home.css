@@ -1,0 +1,36 @@
+.home-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2em;
+  gap: 1rem;
+  align-items: center;
+}
+
+.home-header-brand {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1em;
+}
+
+.home-header-welcome {
+  font-size: 3rem;
+}
+
+.home-logo {
+  display: flex;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+/* This will be a separate style when the article component is made */
+.home-article {
+  background-color: grey;
+  margin: 2rem;
+}
+
+h3 {
+  padding: 2em;
+}
