@@ -56,3 +56,35 @@ CREATE TABLE user_ratings (
   rating_user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- event_type enum
+CREATE TYPE event_type_enum AS ENUM ('solo', 'one-on-one', 'group');
+
+-- table: events
+CREATE TABLE events (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  title VARCHAR(100) NOT NULL,
+  description TEXT,
+  start_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ,
+  event_type event_type_enum NOT NULL,
+  created_by UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  group_id UUID REFERENCES groups(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- table: user_events
+CREATE TABLE user_events (
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  event_id UUID NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+  attended BOOLEAN DEFAULT FALSE,
+  PRIMARY KEY (user_id, event_id)
+);
+
+-- table: user_networks
+CREATE TABLE user_networks (
+    follower_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    following_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    PRIMARY KEY (follower_id, following_id)
+);
